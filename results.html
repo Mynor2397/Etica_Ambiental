@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/public/css/bootstrap.min (3).css">
+    <link rel="stylesheet" href="./src/public/css/header.css">
+    <link rel="stylesheet" href="./src/public/fonts/css/anychart-font.css">
+    <link rel="stylesheet" href="./src/public/css/checkbok.css">
+    <link rel="stylesheet" href="./src/public/css/checkbok.css">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+    <script src="https://mynor2397.github.io/TSEOFICIAL/public/stadistic/Chart.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"> <span class="ac ac-bars"></span>Menu</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html"><span class="ac ac-arrow-left"></span>Encuesta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="row p-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Resultados</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table" id="questions">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Total Encuestas</th>
+                                <th scope="col">Pregunta 1</th>
+                                <th scope="col">Pregunta 2</th>
+                                <th scope="col">Pregunta 3</th>
+                                <th scope="col">Pregunta 4</th>
+                                <th scope="col">Pregunta 5</th>
+                                <th scope="col">Pregunta</th>
+                                <th scope="col">Pregunta 7</th>
+                                <th scope="col">Pregunta 8</th>
+                                <th scope="col">Pregunta 9</th>
+                                <th scope="col">Pregunta 10</th>
+                            </tr>
+                        </thead>
+                        <tbody id="preguntas">
+                            <!-- Aquí se cargarán los datos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <input type="button" class="btn btn-success" onclick="tableToExcel('questions', 'Encuestas')"
+                value="Export to Excel">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./src/public/js/gafic.js"></script>
+    <script src="./src/public/js/toExcel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.opacity{
+  opacity:0.6;
+  filter:alpha(opacity=60); /* IE < 9.0 */
+}

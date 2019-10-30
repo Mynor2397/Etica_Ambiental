@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="./src/public/css/bootstrap.min (3).css">
+    <link rel="stylesheet" href="./src/public/css/header.css">
+    <link rel="stylesheet" href="./src/public/fonts/css/anychart-font.css">
+    <link rel="stylesheet" href="./src/public/css/checkbok.css">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="menu_bar">
+                <a href="#" class="bt-menu">Menu</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://www.ecosia.org/"><span class="ac ac-group"></span><h4>Salvemos nuestro planeta! Usa Ecosia</h4></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container p-4">
+        <div class="card card border-success mb-3">
+            <div class="card-header bg-success">
+                <h3 align="center">Cuestionario sobre la contaminación del aire</h3>
+            </div>
+            <div class="card-body">
+                <label>1. ¿Ve confiable el cambiar los autos de gasolina por los autos eléctricos?</label><br />
+                <input type="radio" name="pregunta1" value="1" id="radio11" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta1" value="0" id="radio12" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>2. ¿Haz notado la contaminación en el aire?</label><br />
+                <input type="radio" name="pregunta2" value="1" id="radio21" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta2" value="0" id="radio22" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>3. ¿Dejaría de quemar cohetes en actividades festivas para generar menos
+                    contaminación?</label><br />
+                <input type="radio" name="pregunta3" value="1" id="radio31" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta3" value="0" id="radio32" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>4. ¿Considera que las fabricas provocan demasiada contaminación en el aire?</label><br />
+                <input type="radio" name="pregunta4" value="1" id="radio41" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta4" value="0" id="radio42" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>5. ¿Considera correcto que la basura sea quemada en vez de reutilizada?</label><br />
+                <input type="radio" name="pregunta5" value="1" id="radio51" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta5" value="0" id="radio52" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>6. ¿Cree que algunos daños a la salud sean provocados por la contaminación en el
+                    aire?</label><br />
+                <input type="radio" name="pregunta6" value="1" id="radio61" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta6" value="0" id="radio62" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>7. Selecciona el contaminante que consideres más peligroso para la calidad del
+                    aire:</label><br />
+                <input type="radio" name="pregunta7" value="1" id="radio71" />
+                <label class="choice" for="Si">Dióxido de carbono</label><br />
+
+                <input type="radio" name="pregunta7" value="2" id="radio72" />
+                <label class="choice" for="No">Monóxido de carbono.</label><br />
+
+                <input type="radio" name="pregunta7" value="3" id="radio73" />
+                <label class="choice" for="No">Óxidos de nitrógeno</label><br />
+                <hr />
+
+                <label>8. ¿Realizas alguna actividad para mejorar la calidad del aire?</label><br />
+                <input type="radio" name="pregunta8" value="1" id="radio81" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta8" value="0" id="radio82" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>9. ¿Consideras que la salud de los niños se ve afectada por el cambio climático?</label><br />
+                <input type="radio" name="pregunta9" value="1" id="radio91" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta9" value="0" id="radio92" />
+                <label class="choice" for="No">No</label><br />
+                <hr />
+
+                <label>10. ¿Usted aceptaria pagar un precio mayor por tener energia sostenible en su
+                    hogar?</label><br />
+                <input type="radio" name="pregunta10" value="1" id="radio101" />
+                <label class="choice" for="Si">Si</label><br />
+
+                <input type="radio" name="pregunta10" value="0" id="radio102" />
+                <label class="choice" for="No">No</label><br />
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 p-4">
+                    <button class="btn btn-outline-success" id="sendData" onclick="Enviar()">Enviar Datos</button>
+                </div>
+                <div class="col-md-6 p-4">
+                    <label>Grupo 3, Octavo semestre Ingeniería en sistemas. </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./src/public/js/index.js"></script>
+</body>
+
+</html>
